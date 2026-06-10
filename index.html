@@ -173,6 +173,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);paddi
 .tl-company{font-size:.8rem;color:rgba(255,255,255,.45);margin-bottom:.35rem}
 .tl-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.55}
 
+/* ── LEAD MAGNET ── */
+.leadmagnet{padding:5rem 2rem;background:var(--light)}
+.lm-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:980px;margin:0 auto}
+.lm-text .section-label{color:var(--teal)}
+.lm-title{font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:.8rem;line-height:1.3}
+.lm-sub{font-size:.95rem;color:var(--gray);margin-bottom:1.2rem;line-height:1.7}
+.lm-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.lm-list li{font-size:.88rem;color:var(--text)}
+.lm-form-wrap{width:100%}
+
 /* ── CTA FINAL ── */
 .cta-section{padding:5rem 2rem;background:var(--navy)}
 .cta-box{max-width:620px;margin:0 auto;text-align:center}
@@ -204,7 +214,8 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
   .btn-primary,.btn-ghost{width:100%;max-width:320px;justify-content:center;min-height:44px}
   .hero-proof{justify-content:center;gap:1.4rem}
   .hero-flow{width:100%;max-width:360px;margin:0 auto;order:2}
-  .probleme,.diagnostic,.suites,.preuve,.cta-section{padding:3.5rem 1.25rem}
+  .probleme,.diagnostic,.suites,.preuve,.leadmagnet,.cta-section{padding:3.5rem 1.25rem}
+  .lm-inner{grid-template-columns:1fr;gap:2rem}
   .section-title{font-size:1.55rem}
   .pain-grid{grid-template-columns:1fr 1fr;gap:.9rem}
   .diag-inner{grid-template-columns:1fr;gap:2rem}
@@ -223,6 +234,32 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
   .hero-proof-item strong{font-size:1.2rem}
 }
 </style>
+
+<!-- Brevo Form Styles -->
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
+  #sib-container input:-ms-input-placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+  #sib-container input::placeholder { font-family: Helvetica, sans-serif; text-align: left; color: #c0ccda; }
+  #sib-container a { text-decoration: underline; color: #2BB2FC; }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!-- End Brevo Form Styles -->
 </head>
 <body>
 
@@ -482,6 +519,88 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
             </div>
           </li>
         </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== LEAD MAGNET ====== -->
+<section class="leadmagnet" id="guide" aria-labelledby="lm-title">
+  <div class="container">
+    <div class="lm-inner">
+      <div class="lm-text">
+        <div class="section-label">📥 Ressource gratuite</div>
+        <h2 class="lm-title" id="lm-title">Les 5 automatisations prioritaires pour votre PME</h2>
+        <p class="lm-sub">En 10 minutes, identifiez les process qui coûtent le plus de temps à votre équipe, et comment les automatiser dès cette semaine.</p>
+        <ul class="lm-list">
+          <li>✅ Les 5 tâches répétitives à automatiser en premier</li>
+          <li>✅ Les outils adaptés à votre secteur</li>
+          <li>✅ Une estimation du temps récupéré chaque semaine</li>
+        </ul>
+      </div>
+      <div class="lm-form-wrap">
+        <div class="sib-form" style="text-align: center; background-color: transparent;">
+          <div id="sib-form-container" class="sib-form-container">
+            <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:rgba(18,47,69,1); border-width:1px; border-style:solid; border-color:#122f45; border-radius:3px;">
+              <form id="sib-form" method="POST" action="https://d23af9b9.sibforms.com/serve/MUIFAPKNj0X63q3V03xHu0p0BfLkB4-6MI8oCZNKBU4miDqQWLH8SYLWYBsPTJxfchZkT0XCIkRxd6kGYnqy0ehW-4PLEWyIw1ypagULgPrJmrzhn7m4jmI7pRPn8I5HrUKZ_t40bpqpVhuDkFH7rMJOt4E4fMHPLQYgJHVpTDSRsgaM8oyxkXqRHBWOZ3_9HoDcpVgxH5FUqEVzew==">
+                <div style="padding: 8px 0;">
+                  <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:32px; font-weight:700; text-align:left; color:#ffffff; background-color:transparent;">
+                    <p>Recevez le guide gratuit</p>
+                  </div>
+                </div>
+                <div style="padding: 8px 0;">
+                  <div class="sib-form-block" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#ffffff; background-color:transparent;">
+                    <div class="sib-text-form-block">
+                      <p>Les 5 automatisations prioritaires pour votre PME, reçu en 2 minutes dans votre boîte mail.</p>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 8px 0;">
+                  <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                      <div class="form__label-row">
+                        <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; color:#ffffff;" for="PRENOM" data-required="*">Entrez votre PRENOM</label>
+                        <div class="entry__field">
+                          <input class="input" maxlength="200" type="text" id="PRENOM" name="PRENOM" autocomplete="off" placeholder="PRENOM" data-required="true" required />
+                        </div>
+                      </div>
+                      <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                      <label class="entry__specification" style="font-family:Helvetica, sans-serif; font-size:12px; text-align:left; color:#8390A4;">Personnalisez ce texte d&#39;aide facultatif avant de publier votre formulaire..</label>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 8px 0;">
+                  <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                      <div class="form__label-row">
+                        <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Helvetica, sans-serif; font-size:16px; color:#ffffff;" for="EMAIL" data-required="*">Veuillez renseigner votre adresse email pour vous inscrire</label>
+                        <div class="entry__field">
+                          <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
+                        </div>
+                      </div>
+                      <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;"></label>
+                      <label class="entry__specification" style="font-family:Helvetica, sans-serif; font-size:12px; text-align:left; color:#8390A4;">Veuillez renseigner votre adresse email pour vous inscrire. Ex. : abc@xyz.com</label>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 8px 0;">
+                  <div class="sib-form-block" style="text-align: left">
+                    <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-family:Helvetica, sans-serif; font-size:16px; font-weight:700; text-align:left; color:#FFFFFF; background-color:#2abfaa; border-width:0px; border-radius:3px;" form="sib-form" type="submit">
+                      <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                        <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                      </svg>
+                      Recevoir le guide gratuit →
+                    </button>
+                  </div>
+                </div>
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="fr">
+                <input type="hidden" name="html_type" value="simple">
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
