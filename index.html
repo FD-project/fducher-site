@@ -656,5 +656,137 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
   </div>
 </footer>
 
+<!-- ====== WIDGET QUALIFICATION ====== -->
+<style>
+#fdq-bubble{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#2abfaa;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(13,37,53,.25);z-index:1000;transition:transform .2s,background .2s;border:none}
+#fdq-bubble:hover{background:#1d9e8a;transform:scale(1.06)}
+#fdq-bubble svg{width:26px;height:26px;fill:#0d2535}
+#fdq-ping{position:absolute;top:-4px;right:-4px;width:14px;height:14px;background:#ff5d5d;border-radius:50%;border:2px solid #fff;animation:fdq-pulse 2s infinite}
+@keyframes fdq-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+#fdq-panel{position:fixed;bottom:96px;right:24px;width:340px;max-width:calc(100vw - 32px);background:#fff;border-radius:16px;box-shadow:0 16px 50px rgba(13,37,53,.25);z-index:1000;display:none;flex-direction:column;overflow:hidden;font-family:'Segoe UI',system-ui,sans-serif;border:1px solid #dde6ee}
+#fdq-panel.fdq-open{display:flex}
+#fdq-head{background:#0d2535;color:#fff;padding:1rem 1.1rem;display:flex;align-items:center;justify-content:space-between}
+#fdq-head-text strong{font-size:.92rem;display:block}
+#fdq-head-text span{font-size:.74rem;color:rgba(255,255,255,.55)}
+#fdq-close{background:none;border:none;color:rgba(255,255,255,.6);font-size:1.2rem;cursor:pointer;line-height:1;padding:0 .2rem}
+#fdq-close:hover{color:#fff}
+#fdq-body{padding:1.1rem;display:flex;flex-direction:column;gap:.7rem;max-height:420px;overflow-y:auto}
+.fdq-msg{background:#f4f8fb;border:1px solid #dde6ee;border-radius:10px;padding:.7rem .85rem;font-size:.86rem;color:#1a2e3b;line-height:1.5}
+.fdq-opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid #2abfaa;color:#0d2535;border-radius:8px;padding:.6rem .8rem;font-size:.84rem;font-weight:600;cursor:pointer;margin-top:.4rem;transition:all .15s}
+.fdq-opt:hover{background:#2abfaa;color:#fff}
+.fdq-cta{display:flex;align-items:center;justify-content:center;gap:.4rem;background:#2abfaa;color:#0d2535;border-radius:8px;padding:.7rem;font-weight:700;font-size:.86rem;text-decoration:none;margin-top:.6rem;transition:background .15s}
+.fdq-cta:hover{background:#1d9e8a}
+.fdq-restart{display:block;text-align:center;font-size:.76rem;color:#6b7f8e;margin-top:.7rem;cursor:pointer;text-decoration:underline}
+@media(max-width:480px){#fdq-panel{right:16px;bottom:84px}#fdq-bubble{right:16px;bottom:16px}}
+</style>
+
+<button id="fdq-bubble" aria-label="Ouvrir l'assistant FD-Project" onclick="fdqToggle()">
+  <span id="fdq-ping"></span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.4 1.05 4.57 2.76 6.17L4 22l5.18-1.59A11.6 11.6 0 0012 21.5c5.52 0 10-4.03 10-9S17.52 2 12 2zm-4 9.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
+</button>
+
+<div id="fdq-panel">
+  <div id="fdq-head">
+    <div id="fdq-head-text">
+      <strong>FD-Project</strong>
+      <span>Réponse sous 24h · Savoie & Remote</span>
+    </div>
+    <button id="fdq-close" aria-label="Fermer" onclick="fdqToggle()">✕</button>
+  </div>
+  <div id="fdq-body"></div>
+</div>
+
+<script>
+(function(){
+  var CAL = "https://calendly.com/frederic-fducher/echange-20min";
+  var body = document.getElementById('fdq-body');
+  var panel = document.getElementById('fdq-panel');
+  var ping = document.getElementById('fdq-ping');
+  var opened = false;
+
+  window.fdqToggle = function(){
+    panel.classList.toggle('fdq-open');
+    if(!opened){ opened = true; ping.style.display='none'; fdqStep('start'); }
+  };
+
+  function clear(){ body.innerHTML = ''; }
+  function msg(text){
+    var d = document.createElement('div');
+    d.className = 'fdq-msg';
+    d.innerHTML = text;
+    body.appendChild(d);
+    body.scrollTop = body.scrollHeight;
+  }
+  function opt(label, fn){
+    var b = document.createElement('button');
+    b.className = 'fdq-opt';
+    b.textContent = label;
+    b.onclick = fn;
+    body.appendChild(b);
+    body.scrollTop = body.scrollHeight;
+  }
+  function cta(label){
+    var a = document.createElement('a');
+    a.className = 'fdq-cta';
+    a.href = CAL; a.target = '_blank'; a.rel = 'noopener';
+    a.innerHTML = '📅 ' + label;
+    body.appendChild(a);
+    var r = document.createElement('div');
+    r.className = 'fdq-restart';
+    r.textContent = 'Recommencer';
+    r.onclick = function(){ fdqStep('start'); };
+    body.appendChild(r);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function fdqStep(step, ctx){
+    if(step === 'start'){
+      clear();
+      msg("Bonjour ! Pour vous orienter, qu'est-ce qui vous amène ?");
+      opt("🗄️ J'ai besoin d'un ERP (gestion, stock, facturation)", function(){ fdqStep('erp'); });
+      opt("⚡ Je veux automatiser des tâches répétitives", function(){ fdqStep('auto'); });
+      opt("🤔 Je ne sais pas encore, j'ai un problème à régler", function(){ fdqStep('diag'); });
+      return;
+    }
+    if(step === 'erp'){
+      clear();
+      msg("Vous gérez votre activité comment aujourd'hui ?");
+      opt("Sur Excel ou papier", function(){ fdqStep('erp-end','excel'); });
+      opt("Avec un logiciel qui ne convient plus", function(){ fdqStep('erp-end','logiciel'); });
+      opt("Rien de structuré pour le moment", function(){ fdqStep('erp-end','rien'); });
+      return;
+    }
+    if(step === 'erp-end'){
+      clear();
+      msg("Pour un socle structurant (gestion commerciale, stock, facturation), j'implémente Odoo ou Dolibarr selon votre taille et votre budget, avec formation de vos équipes jusqu'à l'adoption réelle. Le plus simple est d'en discuter 20 minutes pour voir ce qui correspond à votre situation.");
+      cta("Réserver l'échange de 20 min");
+      return;
+    }
+    if(step === 'auto'){
+      clear();
+      msg("Qu'est-ce qui vous prend le plus de temps actuellement ?");
+      opt("Devis et relances clients", function(){ fdqStep('auto-end','devis'); });
+      opt("Rapports ou comptes-rendus", function(){ fdqStep('auto-end','rapports'); });
+      opt("Collecte d'avis clients", function(){ fdqStep('auto-end','avis'); });
+      opt("Autre chose", function(){ fdqStep('auto-end','autre'); });
+      return;
+    }
+    if(step === 'auto-end'){
+      clear();
+      msg("Ce type de tâche se prête bien à l'automatisation : on connecte les outils que vous avez déjà (Make, n8n) pour supprimer la ressaisie. Investissement one-shot, sans abonnement obligatoire, résultat en 1 à 4 semaines. Un échange de 20 minutes permet de voir si ça s'applique à votre cas.");
+      cta("Réserver l'échange de 20 min");
+      return;
+    }
+    if(step === 'diag'){
+      clear();
+      msg("C'est exactement ce que couvre le Diagnostic Terrain : je viens comprendre votre organisation, j'identifie ce qui coûte du temps et de l'argent, et je vous remets un plan d'action concret, que vous travailliez ensuite avec moi ou pas. On commence toujours par un échange de 20 minutes, sans engagement.");
+      cta("Réserver l'échange de 20 min");
+      return;
+    }
+  }
+})();
+</script>
+
 </body>
 </html>
