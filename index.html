@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestion de projet externalisé, ERP & automatisation PME | FD-Project, Frédéric Ducher</title>
-<meta name="description" content="Pilotage de projet externalisé, assistance à l'intégration ERP (Odoo, Dolibarr), business analyse et cartographie des processus, automatisation ponctuelle (Make, n8n) pour PME et artisans. France entière & Savoie. Premier échange gratuit, réponse sous 24h.">
-<meta name="keywords" content="gestion de projet externalisé, pilotage de projet, chef de projet digital, ERP Odoo, Dolibarr, business analyse, cartographie des processus, automatisation PME, Make, n8n, freelance, Savoie, Albertville, Chambéry, Saint-Jean-de-Maurienne, France">
+<title>Chef de projet digital externalisé certifié PMP, Savoie | FD-Project</title>
+<meta name="description" content="Chef de projet digital externalisé certifié PMP : pilotage de vos projets, assistance à l'intégration ERP avec business analyse et cartographie des process, workflows d'automatisation (Make, n8n). PME et artisans en Auvergne-Rhône-Alpes et à distance.">
+<meta name="keywords" content="chef de projet externalisé, chef de projet certifié PMP, gestion de projet PME, assistance intégration ERP, Odoo, Dolibarr, business analyse, cartographie des process, workflow automatisation, Make, n8n, freelance, Savoie, Albertville, Chambéry, Annecy, Grenoble, Lyon, Auvergne-Rhône-Alpes">
 <meta name="author" content="Frédéric Ducher">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fducher.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fducher.com/">
-<meta property="og:title" content="Gestion de projet externalisé, ERP & automatisation PME | FD-Project">
-<meta property="og:description" content="Pilotage de projet externalisé, assistance à l'intégration ERP, business analyse & cartographie des processus, automatisation ponctuelle (Make, n8n). France entière & Savoie.">
+<meta property="og:title" content="Chef de projet digital externalisé, certifié PMP | FD-Project">
+<meta property="og:description" content="Pilotage de vos projets digitaux, assistance à l'intégration ERP avec business analyse et cartographie des process, workflows d'automatisation. Auvergne-Rhône-Alpes et à distance.">
 <meta property="og:image" content="https://fducher.com/photo.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="FD-Project">
@@ -24,33 +24,44 @@
       "@type":"Person",
       "@id":"https://fducher.com/#person",
       "name":"Frédéric Ducher",
-      "jobTitle":"Chef de Projet Digital & Pilotage de Projet Externalisé",
+      "jobTitle":"Chef de projet digital externalisé, certifié PMP",
       "url":"https://fducher.com",
       "email":"frederic@fducher.com",
       "image":"https://fducher.com/photo.jpg",
-      "sameAs":["https://www.malt.fr/profile/fredericducher","https://www.linkedin.com/in/frederic-ducher-91502519a"],
+      "sameAs":["https://www.malt.fr/profile/fredericducher","https://www.linkedin.com/in/frederic-ducher"],
+      "hasCredential":{
+        "@type":"EducationalOccupationalCredential",
+        "credentialCategory":"certification",
+        "name":"Project Management Professional (PMP)",
+        "identifier":"4509439",
+        "url":"https://www.credly.com/badges/23bd919d-067b-41bf-816f-eecef9004d3e/public_url",
+        "recognizedBy":{"@type":"Organization","name":"Project Management Institute"}
+      },
       "areaServed":[
-        {"@type":"Country","name":"France"},
+        {"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"},
         {"@type":"AdministrativeArea","name":"Savoie"},
         {"@type":"City","name":"Albertville"},
         {"@type":"City","name":"Chambéry"},
-        {"@type":"City","name":"Saint-Jean-de-Maurienne"},
-        {"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}
+        {"@type":"City","name":"Annecy"},
+        {"@type":"City","name":"Grenoble"},
+        {"@type":"City","name":"Lyon"},
+        {"@type":"City","name":"Saint-Jean-de-Maurienne"}
       ]
     },
     {
       "@type":"Service",
       "@id":"https://fducher.com/#services",
-      "name":"Gestion de Projet Externalisé & Transformation Digitale PME",
+      "name":"Gestion de projet externalisée, intégration ERP et automatisation pour PME",
       "provider":{"@id":"https://fducher.com/#person"},
-      "serviceType":["Pilotage de projet externalisé","Business analyse et cartographie des processus","Assistance à l'intégration ERP (Odoo, Dolibarr)","Automatisation ponctuelle de processus (Make, n8n)","Diagnostic Terrain"],
+      "serviceType":["Gestion de projet externalisée","Assistance à l'intégration ERP avec business analyse et cartographie des process","Workflows d'automatisation (Make, n8n)","Diagnostic terrain"],
       "areaServed":[
-        {"@type":"Country","name":"France"},
+        {"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"},
         {"@type":"AdministrativeArea","name":"Savoie"},
         {"@type":"City","name":"Albertville"},
         {"@type":"City","name":"Chambéry"},
-        {"@type":"City","name":"Saint-Jean-de-Maurienne"},
-        {"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"}
+        {"@type":"City","name":"Annecy"},
+        {"@type":"City","name":"Grenoble"},
+        {"@type":"City","name":"Lyon"}
       ]
     }
   ]
@@ -148,7 +159,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);paddi
 
 /* ── SUITES ── */
 .suites{padding:5rem 2rem;background:var(--white)}
-.suites-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:2.5rem}
+.suites-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem}
+.suite-num{position:absolute;top:1.1rem;right:1.3rem;font-size:1.5rem;font-weight:800;color:rgba(42,191,170,.22);line-height:1}
 .suite-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:transform .2s,box-shadow .2s;position:relative}
 .suite-card:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(13,37,53,.08)}
 .suite-icon{width:44px;height:44px;background:rgba(42,191,170,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem}
@@ -197,7 +209,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);paddi
 .certifs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2.5rem}
 .certif-card{display:flex;gap:1.1rem;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.5rem;align-items:flex-start;transition:transform .2s,box-shadow .2s}
 .certif-card:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(13,37,53,.08)}
-.certif-card.is-expired{opacity:.82}
 .certif-seal{width:56px;height:56px;flex-shrink:0;border-radius:12px;background:var(--navy);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:800;text-align:center;line-height:1.1;padding:.3rem;letter-spacing:.3px}
 .certif-body{flex:1;min-width:0}
 .certif-body h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.25rem;line-height:1.35}
@@ -210,6 +221,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);paddi
 .certif-skill{font-size:.71rem;background:rgba(42,191,170,.08);color:var(--teal2);border:1px solid rgba(42,191,170,.2);padding:.16rem .5rem;border-radius:5px;font-weight:600}
 .certif-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.79rem;font-weight:700;color:var(--teal2)}
 .certif-link:hover{text-decoration:underline}
+.certif-jury{display:flex;gap:1.1rem;align-items:flex-start;margin-top:1.3rem;background:var(--navy);border-radius:14px;padding:1.5rem 1.6rem}
+.certif-jury-seal{width:56px;height:56px;flex-shrink:0;border-radius:12px;background:rgba(42,191,170,.15);border:1px solid rgba(42,191,170,.3);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.certif-jury-text strong{display:block;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:.3rem}
+.certif-jury-text p{font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.6}
 
 /* ── CTA FINAL ── */
 .cta-section{padding:5rem 2rem;background:var(--navy)}
@@ -300,9 +315,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
 <header class="hero" role="banner">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge"><span class="dot"></span> Disponible immédiatement · France entière & remote</div>
-      <h1>Vous ne savez pas par<br>où commencer.<br><em>On commence par un diagnostic.</em></h1>
-      <p class="hero-sub">Chef de projet digital indépendant, j'interviens en pilotage de projet externalisé, business analyse & cartographie des processus, assistance à l'intégration ERP (Odoo, Dolibarr) et automatisation ponctuelle de vos tâches répétitives (Make, n8n). Je viens comprendre votre organisation, j'identifie ce qui coûte du temps et de l'argent, et je vous remets un plan d'action concret, que vous travailliez ensuite avec moi ou pas.</p>
+      <div class="hero-badge"><span class="dot"></span> Certifié PMP® · Disponible · Auvergne-Rhône-Alpes & remote</div>
+      <h1>Un chef de projet certifié PMP,<br><em>à la demande, pour vos projets digitaux.</em></h1>
+      <p class="hero-sub">Je pilote vos projets digitaux de bout en bout, je vous assiste dans l'intégration de votre ERP avec une vraie business analyse de vos process, et j'automatise vos tâches répétitives. Les méthodes du Project Management Institute, dimensionnées pour une PME, appliquées sur le terrain et pas depuis un bureau.</p>
       <div class="hero-cta">
         <a href="#suites" class="btn-primary">Découvrir mon offre</a>
         <a href="mailto:frederic@fducher.com" class="btn-ghost">✉️ Me contacter</a>
@@ -349,7 +364,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
   <div class="container">
     <div class="section-label">Le constat</div>
     <h2 class="section-title" id="pb-title">Vous êtes concerné si…</h2>
-    <p class="section-sub">La plupart des PME et artisans que je rencontre partagent les mêmes blocages.</p>
+    <p class="section-sub">La plupart des PME et artisans que je rencontre en Auvergne-Rhône-Alpes partagent les mêmes blocages.</p>
     <div class="pain-grid" role="list">
       <article class="pain-card" role="listitem">
         <div class="pain-icon">📊</div>
@@ -379,46 +394,40 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
 <section class="suites" id="suites" aria-labelledby="suites-title">
   <div class="container">
     <div class="section-label">Mon offre</div>
-    <h2 class="section-title" id="suites-title">Quatre façons de travailler avec moi</h2>
-    <p class="section-sub">Selon votre besoin, l'une de ces quatre directions s'impose naturellement. Ou aucune, et c'est une réponse honnête aussi.</p>
+    <h2 class="section-title" id="suites-title">Trois façons de travailler avec moi</h2>
+    <p class="section-sub">Dans cet ordre, parce que c'est aussi l'ordre dans lequel les choses fonctionnent : on pilote, on structure, puis on automatise.</p>
     <div class="suites-grid">
 
       <article class="suite-card">
+        <div class="suite-num">01</div>
         <div class="suite-icon">🧭</div>
-        <h3>Gestion de projet externalisé</h3>
-        <p>Vous avez un projet digital à mener mais pas les ressources internes pour le piloter ? J'interviens en Chef de Projet externalisé : cadrage, coordination des prestataires, recette, conduite du changement.</p>
+        <h3>Gestion de projet externalisée</h3>
+        <p>Vous avez un projet digital à mener mais personne pour le tenir ? Je le pilote de bout en bout : cadrage, planning, budget, coordination de vos prestataires, recette et conduite du changement. Avec les méthodes du PMI, dimensionnées pour une PME.</p>
         <div class="suite-tags">
+          <span class="suite-tag">Pilotage certifié PMP®</span>
           <span class="suite-tag">AMOA</span>
           <span class="suite-tag">Conduite du changement</span>
-          <span class="suite-tag">À la demande</span>
         </div>
       </article>
 
       <article class="suite-card">
-        <div class="suite-icon">🔍</div>
-        <h3>Business analyse & cartographie des process</h3>
-        <p>Avant tout outil, je cartographie vos processus réels avec vos équipes : qui fait quoi, où se perdent le temps et l'argent, ce qui peut être simplifié ou supprimé. Un livrable clair, exploitable avec moi ou un autre prestataire.</p>
-        <div class="suite-tags">
-          <span class="suite-tag">Cartographie des process</span>
-          <span class="suite-tag">Analyse de besoins</span>
-        </div>
-      </article>
-
-      <article class="suite-card">
+        <div class="suite-num">02</div>
         <div class="suite-icon">🗄️</div>
         <h3>Assistance à l'intégration ERP</h3>
-        <p>Si votre organisation a besoin d'un socle structurant (gestion commerciale, production, facturation, stock), je vous accompagne dans l'intégration d'Odoo ou Dolibarr selon votre taille et votre budget, jusqu'à l'adoption réelle par vos équipes.</p>
+        <p>Avant de paramétrer quoi que ce soit, je cartographie vos processus réels et je formalise vos besoins : qui fait quoi, où se perdent le temps et l'argent. Je vous accompagne ensuite sur l'intégration d'Odoo ou Dolibarr et sur le pilotage de votre intégrateur, jusqu'à l'adoption réelle par vos équipes.</p>
         <div class="suite-tags">
+          <span class="suite-tag">Business analyse</span>
+          <span class="suite-tag">Cartographie des process</span>
           <span class="suite-tag">Odoo</span>
           <span class="suite-tag">Dolibarr</span>
-          <span class="suite-tag">Formation terrain</span>
         </div>
       </article>
 
       <article class="suite-card">
+        <div class="suite-num">03</div>
         <div class="suite-icon">⚡</div>
-        <h3>Automatisation ponctuelle</h3>
-        <p>On branche les outils que vous avez déjà et on automatise les tâches répétitives : devis, relances, rapports, avis clients, alertes stock. Investissement one-shot, pas d'abonnement obligatoire, résultat en quelques semaines.</p>
+        <h3>Workflows d'automatisation</h3>
+        <p>On branche les outils que vous avez déjà et on automatise les tâches répétitives : devis, relances, rapports, avis clients, alertes stock. Investissement one-shot, aucun abonnement FD-Project, résultat en 1 à 4 semaines.</p>
         <div class="suite-tags">
           <span class="suite-tag">Make</span>
           <span class="suite-tag">n8n</span>
@@ -442,9 +451,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
           <img src="photo.jpg" alt="Frédéric Ducher, chef de projet digital et ERP Odoo, Savoie" width="180" height="180" loading="lazy">
           <div class="preuve-profile-text">
             <strong>Frédéric Ducher</strong>
-            <span>Chef de Projet Digital & ERP · FD-Project</span>
+            <span>Chef de projet digital externalisé, certifié PMP® · FD-Project</span>
             <div class="preuve-profile-links">
-              <a href="https://www.linkedin.com/in/frederic-ducher-91502519a" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/frederic-ducher" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
               </a>
@@ -472,10 +481,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
           <li class="tl-item">
             <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
             <div>
-              <div class="tl-year">2026 · Aujourd'hui</div>
-              <div class="tl-role">Chef de Projet Digital & Consultant ERP</div>
-              <div class="tl-company">FD-Project · Freelance · Val-d'Arc, Savoie</div>
-              <div class="tl-desc">Diagnostic, implémentation ERP (Odoo, Dolibarr), automatisation PME et pilotage de projet externalisé pour artisans et PME en Auvergne-Rhône-Alpes.</div>
+              <div class="tl-year">2019 · Aujourd'hui</div>
+              <div class="tl-role">Chef de projet digital externalisé, certifié PMP®</div>
+              <div class="tl-company">FD-Project · Freelance, structuré en EURL depuis 2026 · Val-d'Arc, Savoie</div>
+              <div class="tl-desc">Gestion de projet externalisée, assistance à l'intégration ERP avec business analyse, et workflows d'automatisation pour les PME et artisans d'Auvergne-Rhône-Alpes.</div>
             </div>
           </li>
           <li class="tl-item">
@@ -540,35 +549,14 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
         </div>
       </article>
 
-      <article class="certif-card">
-        <div class="certif-seal">AGILE<br>4ALL</div>
-        <div class="certif-body">
-          <h3>Agile4All : sensibilisation à l'agilité en entreprise</h3>
-          <div class="certif-org">Skills4All, spécialiste du digital learning certifiant</div>
-          <span class="certif-status valid">Attestation d'achèvement</span>
-          <div class="certif-meta">Émise en octobre 2025<br>Identifiant : KdA0YvyCnB</div>
-          <div class="certif-skills">
-            <span class="certif-skill">Agilité en entreprise</span>
-          </div>
-          <a class="certif-link" href="https://lms.skills4all.com/mod/linkedincert/verify_certificate.php?code=KdA0YvyCnB" target="_blank" rel="noopener">Vérifier l'attestation →</a>
-        </div>
-      </article>
+    </div>
 
-      <article class="certif-card is-expired">
-        <div class="certif-seal">865<br>PTS</div>
-        <div class="certif-body">
-          <h3>Opquast Certified : maîtrise de la qualité en projet web</h3>
-          <div class="certif-org">Opquast</div>
-          <span class="certif-status expired">Échue, à renouveler</span>
-          <div class="certif-meta">Obtenue en février 2021 avec 865 points, échue en février 2026<br>Identifiant : GTLK35</div>
-          <div class="certif-skills">
-            <span class="certif-skill">Qualité web</span>
-            <span class="certif-skill">Accessibilité</span>
-          </div>
-          <a class="certif-link" href="https://directory.opquast.com/fr/certificat/GTLK35/" target="_blank" rel="noopener">Consulter le certificat →</a>
-        </div>
-      </article>
-
+    <div class="certif-jury">
+      <div class="certif-jury-seal">⚖️</div>
+      <div class="certif-jury-text">
+        <strong>Jury évaluateur, titre RNCP Chef de projet digital</strong>
+        <p>J'évalue les dossiers professionnels des candidats au titre RNCP 39602, Chef de projet digital (e-commerce), pour l'organisme certificateur Skills4All. Une façon de rester au contact de ce qui se pratique aujourd'hui en gestion de projet, et de garder un regard critique sur ma propre méthode.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -645,7 +633,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
         Vous pouvez aussi passer par
         <a href="https://www.malt.fr/profile/fredericducher" target="_blank" rel="noopener">mon profil Malt</a>
         &nbsp;·&nbsp;
-        <a href="https://www.linkedin.com/in/frederic-ducher-91502519a" target="_blank" rel="noopener">mon profil LinkedIn</a>
+        <a href="https://www.linkedin.com/in/frederic-ducher" target="_blank" rel="noopener">mon profil LinkedIn</a>
       </address>
 
       <div class="cta-divider">ou via ce formulaire</div>
@@ -715,7 +703,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.36 3.64a5.4 5.4 0 00-7.63 0L12 4.36l-.73-.72a5.39 5.39 0 00-7.63 7.63l8.36 8.35 8.36-8.35a5.4 5.4 0 000-7.63z"/></svg>
       Malt
     </a>
-    <a href="https://www.linkedin.com/in/frederic-ducher-91502519a" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/frederic-ducher" target="_blank" rel="noopener" aria-label="LinkedIn">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn
     </a>
@@ -769,7 +757,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
 (function(){
   var MAIL = "mailto:frederic@fducher.com";
   var MALT = "https://www.malt.fr/profile/fredericducher";
-  var LINKEDIN = "https://www.linkedin.com/in/frederic-ducher-91502519a";
+  var LINKEDIN = "https://www.linkedin.com/in/frederic-ducher";
   var body = document.getElementById('fdq-body');
   var panel = document.getElementById('fdq-panel');
   var ping = document.getElementById('fdq-ping');
@@ -818,15 +806,15 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
     if(step === 'start'){
       clear();
       msg("Bonjour ! Pour vous orienter, qu'est-ce qui vous amène ?");
-      opt("🧭 Piloter un projet digital sans ressources internes", function(){ fdqStep('pilotage'); });
-      opt("🔍 Comprendre où je perds du temps et de l'argent", function(){ fdqStep('diag'); });
-      opt("🗄️ J'ai besoin d'un ERP (gestion, stock, facturation)", function(){ fdqStep('erp'); });
-      opt("⚡ Je veux automatiser des tâches répétitives", function(){ fdqStep('auto'); });
+      opt("🧭 Faire piloter un projet digital", function(){ fdqStep('pilotage'); });
+      opt("🗄️ Structurer ou changer mon ERP", function(){ fdqStep('erp'); });
+      opt("⚡ Automatiser des tâches répétitives", function(){ fdqStep('auto'); });
+      opt("🔍 Je ne sais pas encore, je perds du temps", function(){ fdqStep('diag'); });
       return;
     }
     if(step === 'pilotage'){
       clear();
-      msg("Cadrage, coordination des prestataires, recette, conduite du changement : j'interviens en Chef de Projet externalisé sur votre projet digital, à la demande. Décrivez-moi votre projet en quelques lignes, je vous dis comment je peux m'intégrer à votre organisation.");
+      msg("Cadrage, planning, budget, coordination de vos prestataires, recette et conduite du changement : je pilote votre projet digital de bout en bout, à la demande, avec les méthodes du PMI. Décrivez-moi votre projet en quelques lignes, je vous dis comment je peux m'intégrer à votre organisation.");
       cta();
       return;
     }
@@ -840,7 +828,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding
     }
     if(step === 'erp-end'){
       clear();
-      msg("Pour un socle structurant (gestion commerciale, stock, facturation), je vous accompagne dans l'intégration d'Odoo ou Dolibarr selon votre taille et votre budget, avec formation de vos équipes jusqu'à l'adoption réelle. Le plus simple est de m'écrire en quelques lignes pour voir ce qui correspond à votre situation.");
+      msg("On commence par cartographier vos processus réels et formaliser vos besoins, avant de parler d'outil. Je vous accompagne ensuite sur l'intégration d'Odoo ou Dolibarr et sur le pilotage de votre intégrateur, jusqu'à l'adoption réelle par vos équipes. Le plus simple est de m'écrire en quelques lignes pour voir ce qui correspond à votre situation.");
       cta();
       return;
     }
